@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class ReactiveTarget : MonoBehaviour
 {
-    public void ReactToHit() => StartCoroutine(Die());
+    public void ReactToHit()
+    {
+        WanderingAI behaviour = GetComponent<WanderingAI>();
+        if (behaviour) behaviour.SetAlive(false);
+        StartCoroutine(Die());
+    }
 
     private IEnumerator Die()
     {
