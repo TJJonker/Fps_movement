@@ -18,6 +18,12 @@ public class MouseLook : MonoBehaviour
 
     private float verticalRot;
 
+    private void Start()
+    {
+        Rigidbody body = GetComponent<Rigidbody>();
+        if (body) body.freezeRotation = true;
+    }
+
     private void Update()
     {
         if (axes == RotationAxes.MouseX)

@@ -2356,6 +2356,7 @@ GameObject:
   - component: {fileID: 1818622919}
   - component: {fileID: 1818622918}
   - component: {fileID: 1818622917}
+  - component: {fileID: 1818622922}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2375,8 +2376,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75217382a839a99479afa0cf490af42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 1
+  axes: 0
   sensitivityHor: 9
+  sensitivityVer: 9
+  minimumVert: -45
+  maximumVert: 45
 --- !u!143 &1818622918
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2459,6 +2463,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1818622922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818622916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d13a557d7942b44b721a3a0e4c22b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
 --- !u!1 &1894830416
 GameObject:
   m_ObjectHideFlags: 0
