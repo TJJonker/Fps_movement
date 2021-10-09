@@ -36,6 +36,13 @@ public class MouseLook : MonoBehaviour
         else
         {
             // both horizontal and vertical rotation here
+            verticalRot -= Input.GetAxis("Mouse Y") * sensitivityVer;
+            verticalRot = Mathf.Clamp(verticalRot, minimumVert, maximumVert);
+
+            float delta = Input.GetAxis("Mouse X") * sensitivityHor;
+            float horizontalRot = transform.localEulerAngles.y + delta;
+
+            transform.localEulerAngles = new Vector3(verticalRot, horizontalRot, 0);
         }
     }
 }
